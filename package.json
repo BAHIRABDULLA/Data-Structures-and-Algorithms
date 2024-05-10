@@ -1,15 +1,14 @@
 {
   "name": "DSA",
   "version": "1.0.0",
-  "main": "linkedList.js",
+  "main": "search.js",
   "repository": "https://github.com/BAHIRABDULLA/Data-Structures-and-Algorithms.git",
   "author": "Bahir Abdulla <bahirk880@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2",
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "start": "nodemon linkedList.js"
+    "start": "nodemon search.js"
   }
 }
