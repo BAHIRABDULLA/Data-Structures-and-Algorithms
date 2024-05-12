@@ -45,7 +45,6 @@ console.log(fibanocci(5));
 
 
 
-
 //     string reverse 
 function reverseString(str){
     if(str===''){
@@ -60,7 +59,7 @@ console.log(reverseString('welcome'));
 
 
 
-//       this is another method to reverse string
+//       this is another method for reverse string
 function reverseString(str){
     if(str===''){
         return ''
@@ -70,6 +69,8 @@ function reverseString(str){
 console.log();
 
 
+
+//      this is another method for reverse string
 function reverseString(str){
     if(str===''){
         return ''
