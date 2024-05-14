@@ -1,7 +1,7 @@
 {
   "name": "DSA",
   "version": "1.0.0",
-  "main": "Sorting/quickSort.js",
+  "main": "Hash/hashAfterColli.js",
   "repository": "https://github.com/BAHIRABDULLA/Data-Structures-and-Algorithms.git",
   "author": "Bahir Abdulla <bahirk880@gmail.com>",
   "license": "MIT",
@@ -9,6 +9,6 @@
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "start": "nodemon quickSort.js"
+    "start": "nodemon hashAfterColli.js"
   }
 }
