@@ -7,9 +7,8 @@ class HashTable {
         let a = 0
         for(let i=0;i<key.length;i++){
             a+=key.charCodeAt(i)
-            // console.log(a,'a');
         }
-        console.log(a,'a--------');
+        console.log(a,'a--------',key);
         return a%this.size
     }
     set(key,value){
@@ -17,7 +16,7 @@ class HashTable {
         // this.table[index]=value
         let bucket = this.table[index]
         if(!bucket){
-            bucket=[[key,value]]
+            this.table[index]=[[key,value]]
         }else{
             const sameKeyItem= bucket.find(item=>item[0]===key)
             if(sameKeyItem){
@@ -30,10 +29,31 @@ class HashTable {
     }
     get(key){
         const index = this.hash(key)
-        return this.table[index]
+        // return this.table[index]
+        const bucket=this.table[index]
+        if(bucket){
+            const sameKeyItem=bucket.find(item=>item[0]===key)
+            if(sameKeyItem){
+                return sameKeyItem[1]
+            }
+        }
+        return undefined
+    }
+    remove(key){
+        const index=this.hash(key)
+        // this.table[index]=undefined
+        const bucket=this.table[index]
+        if(bucket){
+            const sameKeyItem=bucket.find(item=>item[0]===key)
+            if(sameKeyItem){
+                bucket.splice(bucket.indexOf(sameKeyItem),1)
+            }
+        }
+        
     }
     display(){
         console.log('-----');
+        console.log(this.table.length,'this.table.length');
         for(let i = 0;i<this.table.length;i++){
             if(this.table[i]){
                 console.log(i,this.table[i],'in the display');
@@ -43,8 +63,13 @@ class HashTable {
 }
 // console.log(HashTable);
 const hash= new HashTable(11)
+// hash.display()
 hash.set('name','rishad')
 hash.set('age','adhil')
-hash.set('mii','jithesh')
-hash.get('name')
+hash.set('mane','jithesh')
+console.log(hash.get('name'));
 hash.display()
+hash.set('name','diana')
+hash.remove('name')
+hash.display()
+// console.log(hash,'hash');

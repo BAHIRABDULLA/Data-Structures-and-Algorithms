@@ -59,3 +59,53 @@ stack.print()
 stack.pop()
 stack.print()
 console.log(stack.peek());
+
+
+
+
+//    reverse a string 
+
+// class Stack {
+//     constructor(){
+        
+//         this.items=[]
+//     }
+//     isEmpty(){
+//         return this.items.length===0
+//     }
+//     push(value){
+//         this.items.push(value)
+//     }
+//     pop(){
+//        return this.items.pop()
+//     }
+//     print(){
+//         let a =''
+//         for(let i =0;i<this.items.length;i++){
+//             a+= `${this.items[i]} `
+            
+//         }console.log(a)
+//     }
+// }
+// const stack = new Stack()
+// stack.push(4)
+// stack.push(6)
+// stack.push(7)
+// stack.push(2)
+// stack.pop()
+// stack.print()
+// function reverseString(str){
+//     const stack =new Stack()
+//     for(let s of str){
+//         stack.push(s)
+//     }
+//     console.log(stack)
+//     let reverseString=''
+//         while(!stack.isEmpty()){
+//         reverseString+=stack.pop()
+//     }
+//     return reverseString
+// }
+
+
+// console.log(reverseString('malappu'))

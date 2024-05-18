@@ -1,7 +1,7 @@
 class Node {
     constructor(value){
         this.value=value
-        this.next=null
+        this.next= null
     }
 }
 class LinkedList {
@@ -14,63 +14,37 @@ class LinkedList {
     }
     print(){
         if(this.isEmpty()){
-            console.log('list is empty ');
-            return
+            console.log('list is emtpy');
         }
-        let a=''
-        let curr=this.head
+        let curr= this.head
+        a=''
         while(curr){
             a+=`${curr.value} `
-            curr=curr.next
         }
         console.log(a);
     }
     prepend(value){
-        let  node=new Node(value)
+        const node = new Node(value)
         if(this.isEmpty()){
-            this.head=node
+            this.head=node 
         }else{
             node.next=this.head
             this.head=node
         }
         this.size++
     }
-    removeDuplicate(){
+    append(value){
+        const node =  new Node(value)
         if(this.isEmpty()){
-            
-            return null
-        }
-        let curr=this.head
-       
-        while(curr){
-            let run=curr
-            while(run.next){
-                if(curr.value===run.next.value){
-                    console.log(curr.value,'curr.value');
-                    console.log(run.next.value,'run.next.value');
-                    run.next=run.next.next
-                    this.size--
-                    curr=curr.next
-                    this.size--
-                    console.log(curr.value,'curr.value after');
-                    
-                }
-                run=run.next
+            this.head= node
+        }else{
+            let curr= this.head
+            while(curr.next){
+                curr=curr.next
             }
-            curr=curr.next
+            curr.next=node
         }
+        this.size++
 
     }
 }
-const list = new LinkedList()
-list.print()
-list.prepend(1)
-list.prepend(2)
-list.prepend(6)
-list.prepend(3)
-list.prepend(4)
-list.prepend(6)
-list.prepend(5)
-list.print()
-list.removeDuplicate()
-list.print()
