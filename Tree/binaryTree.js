@@ -118,11 +118,12 @@ class BinarySearchTree {
                 return null
             }
             if(!root.left){
+                return root.right
+            }else if(!root.right){
                 return root.left
             }
-            if(!root.right){
-                return root.right
-            }
+            root.value=this.min(root.right)
+            root.right=this.deleteNode(root.right,root.value)
         }
     }
 }

@@ -24,6 +24,14 @@ class HashTable {
         const index = this.hash(key)
         this.table[index]=undefined
     }
+    findInMap(val){
+        for(let [key,value] of this.table){
+            if(value===val){
+                return true
+            }
+        }
+        return false
+    }
     display(){
         for(let i =0;i<this.table.length;i++){
             if(this.table[i]){
