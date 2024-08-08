@@ -4,12 +4,11 @@ class HashTable {
         this.size=size
     }
     hash(key){
-        let a = 0
+        let total = 0
         for(let i=0;i<key.length;i++){
             a+=key.charCodeAt(i)
         }
-        console.log(a,'a--------',key);
-        return a%this.size
+        return total%this.size
     }
     set(key,value){
         const index = this.hash(key)
@@ -52,7 +51,6 @@ class HashTable {
         
     }
     display(){
-        console.log('-----');
         console.log(this.table.length,'this.table.length');
         for(let i = 0;i<this.table.length;i++){
             if(this.table[i]){
